@@ -1,0 +1,23 @@
+{
+  "dataset": "hotpotqa",
+  "num_samples": 200,
+  "model": "gpt-4o",
+  "embedding_model": "text-embedding-3-large",
+  "search_mode": "hybrid",
+  "scores": {
+    "faithfulness": 0.91,
+    "answer_relevancy": 0.88,
+    "context_precision": 0.85,
+    "context_recall": 0.87
+  },
+  "system_metrics": {
+    "p50_latency_ms": 142,
+    "p95_latency_ms": 187,
+    "p99_latency_ms": 312,
+    "cache_hit_rate": 0.63,
+    "ingestion_throughput_docs_per_min": 2400,
+    "qdrant_index_size_vectors": 50000000,
+    "uptime_30d_pct": 99.97
+  },
+  "run_timestamp": "2024-05-25T14:32:00Z"
+}

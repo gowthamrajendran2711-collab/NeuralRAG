@@ -1,0 +1,36 @@
+qdrant:
+  url: http://localhost:6333
+  collection_name: neural_rag
+  vector_size: 3072
+  timeout: 300
+
+embeddings:
+  provider: openai
+  model: text-embedding-3-large
+  batch_size: 100
+
+chunking:
+  strategy: semantic
+  chunk_size: 512
+  overlap: 64
+  similarity_threshold: 0.75
+
+search:
+  mode: hybrid
+  bm25_weight: 0.3
+  dense_weight: 0.7
+  top_k: 10
+  rerank: true
+
+cache:
+  ttl_seconds: 3600
+  similarity_threshold: 0.95
+  redis_db: 2
+
+eval:
+  llm_judge: gpt-4o
+  embeddings_model: text-embedding-3-large
+  datasets:
+    - hotpotqa
+    - triviaqa
+  num_samples: 200
