@@ -5,6 +5,7 @@ from pydantic import BaseModel
 from typing import Optional, Literal
 import time, structlog
 from prometheus_client import Counter, Histogram, make_asgi_app
+import django
 
 logger = structlog.get_logger(__name__)
 app = FastAPI(title="NeuralRAG API", version="1.0.0")
