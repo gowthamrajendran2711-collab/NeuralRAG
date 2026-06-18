@@ -4,6 +4,7 @@ from pathlib import Path
 from datasets import Dataset
 from ragas import evaluate
 from ragas.metrics import faithfulness, answer_relevancy, context_precision, context_recall
+import numpy
 
 class RAGASHarness:
     METRICS = [faithfulness, answer_relevancy, context_precision, context_recall]
